@@ -1,0 +1,172 @@
+import java.util.*;
+
+public class QueueandSTack {
+
+    public static void main(String [] args ) {
+        Scanner in = new Scanner(System.in);
+        
+        Stack stack = new Stack();
+        Queue queue = new LinkedList();
+        Queue queue2 = new LinkedList();
+        Queue queue3 = new LinkedList();
+        Queue queue4 = new LinkedList();
+        Queue queue5 = new LinkedList();
+        
+        System.out.println("Cashier (1) enter four customers : ");
+        
+        System.out.println("Customer 1 : ");
+        String customer1 = in.nextLine();
+        stack.push(customer1);
+        
+        System.out.println("Customer 2 : ");
+        String customer2 = in.nextLine();
+        stack.push(customer2);  
+        
+        System.out.println("Customer 3 : ");
+        String customer3 = in.nextLine();
+        stack.push(customer3);
+        
+        System.out.println("Customer 4 : ");
+        String customer4 = in.nextLine();
+        stack.push(customer4);
+               
+        System.out.println("Current customers in cashier 1 : " + stack);
+        queue.offer(stack.pop());
+        queue.offer(stack.pop());
+        queue.offer(stack.pop());
+        queue.offer(stack.pop());
+        System.out.println("-------------------------------------------------------");
+        System.out.println("Cashier(2) enter four customers");
+        
+        System.out.println("Customer 1 : ");
+        String customer5 = in.nextLine();
+        stack.push(customer5);
+        
+        System.out.println("Customer 2 : ");
+        String customer6 = in.nextLine();
+        stack.push(customer6);  
+        
+        System.out.println("Customer 3 : ");
+        String customer7 = in.nextLine();
+        stack.push(customer7);
+        
+        System.out.println("Customer 4 : ");
+        String customer8 = in.nextLine();
+        stack.push(customer8);
+        
+        System.out.println("Current customers in cashier 2 : " + stack);
+        queue2.offer(stack.pop());
+        queue2.offer(stack.pop());
+        queue2.offer(stack.pop());
+        queue2.offer(stack.pop());     
+        System.out.println("-------------------------------------------------------");
+        System.out.println("Cashier(3) enter four customers");
+        
+        System.out.println("Customer 1 : ");
+        String customer9 = in.nextLine();
+        stack.push(customer9);
+        
+        System.out.println("Customer 2 : ");
+        String customer10 = in.nextLine();
+        stack.push(customer10);  
+        
+        System.out.println("Customer 3 : ");
+        String customer11 = in.nextLine();
+        stack.push(customer11);
+        
+        System.out.println("Customer 4 : ");
+        String customer12 = in.nextLine();
+        stack.push(customer12);
+        
+        System.out.println("Current customers in cashier 3 : " + stack);
+        queue3.offer(stack.pop());
+        queue3.offer(stack.pop());
+        queue3.offer(stack.pop());
+        queue3.offer(stack.pop());
+         System.out.println("-------------------------------------------------------");       
+        System.out.println("Cashier(4) enter four customers");
+        
+        System.out.println("Customer 1 : ");
+        String customer13 = in.nextLine();
+        stack.push(customer13);
+        
+        System.out.println("Customer 2 : ");
+        String customer14 = in.nextLine();
+        stack.push(customer14);  
+        
+        System.out.println("Customer 3 : ");
+        String customer15 = in.nextLine();
+        stack.push(customer15);
+        
+        System.out.println("Customer 4 : ");
+        String customer16 = in.nextLine();
+        stack.push(customer16);
+        
+        System.out.println("Current customers in cashier 4 : " + stack);
+        queue4.offer(stack.pop());
+        queue4.offer(stack.pop());
+        queue4.offer(stack.pop());
+        queue4.offer(stack.pop());
+        System.out.println("-------------------------------------------------------");
+        System.out.println("Cashier(5) enter four customers");
+        
+        System.out.println("Customer 1 : ");
+        String customer17 = in.nextLine();
+        stack.push(customer17);
+        
+        System.out.println("Customer 2 : ");
+        String customer18 = in.nextLine();
+        stack.push(customer18);  
+        
+        System.out.println("Customer 3 : ");
+        String customer19 = in.nextLine();
+        stack.push(customer19);
+        
+        System.out.println("Customer 4 : ");
+        String customer20 = in.nextLine();
+        stack.push(customer20);
+        
+        System.out.println("Current customers in cashier 5 : " + stack);
+        queue5.offer(stack.pop());
+        queue5.offer(stack.pop());
+        queue5.offer(stack.pop());
+        queue5.offer(stack.pop());
+        System.out.println("-------------------------------------------------------");
+        System.out.println(" Cashier : " + queue);
+        System.out.println(" Cashier : " + queue2);
+        System.out.println(" Cashier : " + queue3);
+        System.out.println(" Cashier : " + queue4);
+        System.out.println(" Cashier : " + queue5);
+        System.out.println("-------------------------------------------------------");
+        while(!queue.isEmpty() | queue2.isEmpty() | queue3.isEmpty() | queue4.isEmpty() | queue.isEmpty()) {
+            System.out.println("Press C1 if you done on cashier 1 , press C2 if you done on cashier 2, press C3 if you done on cashier 3, press C4 if you done on cashier 4 and press C5 if you done on cashier 5 : ");
+            String customer = in.nextLine().toUpperCase();
+            if (customer.equals("C1")) {
+                queue.poll();
+                System.out.println(queue);
+            }
+            else if (customer.equals("C2")) {
+                queue2.poll();
+                System.out.println(queue2);   
+            }
+            else if (customer.equals("C3")) {
+                queue3.poll();
+                System.out.println(queue3);   
+            }
+            else if (customer.equals("C4")) {
+                queue4.poll();
+                System.out.println(queue4);          
+            }
+            else if (customer.equals("C5")) {
+                queue5.poll();
+                System.out.println(queue5);  
+            }
+            else {
+                System.out.println("all cashier is done");
+                break;
+            }
+        }
+        System.out.println("all cashier is close.");
+    }
+    
+}
